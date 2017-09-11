@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
     web:    
         image: nginx:latest
@@ -17,17 +17,6 @@ services:
         links:
             - "mariadb:mariadb"
             - "php:php"
-    php:
-        build: ./web
-        container_name: php
-        restart: always
-        volumes:
-            - "./etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini"
-            - ./web:/web
-        links:
-            - "mariadb:mariadb"
-        depends_on:
-            - "mariadb"
     myadmin:
         image: phpmyadmin/phpmyadmin
         container_name: phpmyadmin
@@ -52,9 +41,9 @@ services:
             - ./database/cp:/docker-entrypoint-initdb.d
         ports:
             - "3306:3306"
-    node:
+    go:
         build: ./app
-        container_name: node
+        container_name: go
         restart: always
         ports:
             - "7000:7000"
@@ -62,13 +51,3 @@ services:
             - "mariadb:mariadb"
         depends_on:
             - "mariadb"
-
-
-
-
-
-
-
-
-
-
