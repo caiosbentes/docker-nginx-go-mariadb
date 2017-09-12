@@ -1,10 +1,11 @@
-FROM golang:1.8
+FROM nodesource/node:4
 
-WORKDIR /go/src/app
-COPY . .
+MAINTAINER Caio Sanches <caiosbentes@gmail.com>
 
-RUN go get gopkg.in/gin-gonic/gin.v1
-RUN go get -u github.com/jinzhu/gorm
-RUN go get github.com/go-sql-driver/mysql
+RUN mkdir -p /home/nodejs/app
+WORKDIR /home/nodejs/app
 
-CMD ["go", "built", "main.go"]
+COPY . /home/nodejs/app
+RUN npm install --production
+
+CMD ["node", "app.js"]

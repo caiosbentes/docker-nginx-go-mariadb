@@ -1,22 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.1
--- https://www.phpmyadmin.net/
+-- version 4.2.12deb2+deb8u1
+-- http://www.phpmyadmin.net
 --
--- Host: mariadb
--- Generation Time: Jun 19, 2017 at 04:51 PM
--- Server version: 10.1.24-MariaDB-1~jessie
--- PHP Version: 7.0.16
+-- Host: localhost
+-- Generation Time: 01-Abr-2016 às 09:05
+-- Versão do servidor: 5.5.47-0+deb8u1
+-- PHP Version: 5.6.17-0+deb8u1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `setserver`
@@ -25,272 +23,72 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `history`
+-- Estrutura da tabela `history`
 --
 
-CREATE TABLE `history` (
-  `id` int(255) NOT NULL,
+CREATE TABLE IF NOT EXISTS `history` (
+`id` int(255) NOT NULL,
   `finger_id` int(64) NOT NULL,
   `name` varchar(255) NOT NULL,
   `timestamp` varchar(288) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `history`
+-- Extraindo dados da tabela `history`
 --
 
 INSERT INTO `history` (`id`, `finger_id`, `name`, `timestamp`) VALUES
-(1, 1, 'Caio Sanches', '1459341706'),
-(2, 1, 'Caio Sanches', '1497032830'),
-(3, 1, 'Caio Sanches', '1497032842'),
-(4, 1, 'Caio Sanches', '1497032920'),
-(5, 1, 'Caio Sanches', '1497032957'),
-(6, 1, 'Caio Sanches', '1497033035'),
-(7, 3, 'NOVO USUARIO', '1497033052'),
-(8, 3, 'NOVO USUARIO', '1497033058'),
-(9, 1, 'Caio Sanches', '1497033103'),
-(10, 2, 'NOVO USUARIO', '1497033118'),
-(11, 2, 'NOVO USUARIO', '1497033122'),
-(12, 2, 'NOVO USUARIO', '1497033124'),
-(13, 2, 'Vasconcelos', '1497033209'),
-(14, 2, 'Vasconcelos', '1497033215'),
-(15, 2, 'Vasconcelos', '1497033240'),
-(16, 3, 'NOVO USUARIO', '1497033261'),
-(17, 3, 'Gabriel Silva', '1497033369'),
-(18, 2, 'Vasconcelos', '1497033397'),
-(19, 2, 'Vasconcelos', '1497033425'),
-(20, 4, 'Rafael Martins', '1497033516'),
-(21, 2, 'Vasconcelos', '1497033554'),
-(22, 2, 'Vasconcelos', '1497033562'),
-(23, 2, 'Vasconcelos', '1497110196'),
-(24, 2, 'Vasconcelos', '1497110341'),
-(25, 2, 'Vasconcelos', '1497110349'),
-(26, 2, 'Vasconcelos', '1497110356'),
-(27, 2, 'Vasconcelos', '1497110363'),
-(28, 2, 'Vasconcelos', '1497110380'),
-(29, 2, 'Vasconcelos', '1497110440'),
-(30, 2, 'Vasconcelos', '1497110453'),
-(31, 2, 'Vasconcelos', '1497110459'),
-(32, 2, 'Vasconcelos', '1497110469'),
-(33, 2, 'Vasconcelos', '1497111916'),
-(34, 2, 'Vasconcelos', '1497111994'),
-(35, 2, 'Vasconcelos', '1497112000'),
-(36, 2, 'Vasconcelos', '1497112005'),
-(37, 2, 'Vasconcelos', '1497112011'),
-(38, 2, 'Vasconcelos', '1497112015'),
-(39, 2, 'Vasconcelos', '1497112026'),
-(40, 2, 'Vasconcelos', '1497112031'),
-(41, 2, 'Vasconcelos', '1497112037'),
-(42, 2, 'Vasconcelos', '1497112172'),
-(43, 2, 'Vasconcelos', '1497112187'),
-(44, 2, 'Vasconcelos', '1497112202'),
-(45, 2, 'Vasconcelos', '1497112230'),
-(46, 2, 'Vasconcelos', '1497112262'),
-(47, 2, 'Vasconcelos', '1497112266'),
-(48, 2, 'Vasconcelos', '1497112974'),
-(49, 2, 'Vasconcelos', '1497112993'),
-(50, 2, 'Vasconcelos', '1497113004'),
-(51, 2, 'Vasconcelos', '1497120187'),
-(52, 2, 'Vasconcelos', '1497120352'),
-(53, 2, 'Vasconcelos', '1497120398'),
-(54, 2, 'Vasconcelos', '1497124200'),
-(55, 2, 'Vasconcelos', '1497124207'),
-(56, 2, 'Vasconcelos', '1497124213'),
-(57, 2, 'Vasconcelos', '1497124219'),
-(58, 2, 'Vasconcelos', '1497124224'),
-(59, 2, 'Vasconcelos', '1497124235'),
-(60, 2, 'Vasconcelos', '1497124240'),
-(61, 2, 'Vasconcelos', '1497124245'),
-(62, 2, 'Vasconcelos', '1497124255'),
-(63, 2, 'Vasconcelos', '1497124262'),
-(64, 2, 'Vasconcelos', '1497124267'),
-(65, 2, 'Vasconcelos', '1497124564'),
-(66, 2, 'Vasconcelos', '1497124572'),
-(67, 2, 'Vasconcelos', '1497124586'),
-(68, 2, 'Vasconcelos', '1497124598'),
-(69, 2, 'Vasconcelos', '1497124611'),
-(70, 2, 'Vasconcelos', '1497124620'),
-(71, 2, 'Vasconcelos', '1497124624'),
-(72, 2, 'Vasconcelos', '1497124639'),
-(73, 2, 'Vasconcelos', '1497124645'),
-(74, 2, 'Vasconcelos', '1497124679'),
-(75, 2, 'Vasconcelos', '1497124685'),
-(76, 5, 'NOVO USUARIO', '1497124706'),
-(77, 5, 'NOVO USUARIO', '1497124710'),
-(78, 5, 'NOVO USUARIO', '1497124718'),
-(79, 5, 'NOVO USUARIO', '1497124723'),
-(80, 5, 'NOVO USUARIO', '1497124726'),
-(81, 5, 'NOVO USUARIO', '1497124739'),
-(82, 5, 'NOVO USUARIO', '1497124748'),
-(83, 5, 'NOVO USUARIO', '1497124751'),
-(84, 2, 'Vasconcelos', '1497124790'),
-(85, 2, 'Vasconcelos', '1497124796'),
-(86, 2, 'Vasconcelos', '1497124800'),
-(87, 2, 'Vasconcelos', '1497124814'),
-(88, 2, 'Vasconcelos', '1497124820'),
-(89, 2, 'Vasconcelos', '1497124825'),
-(90, 5, 'Fiterlinge', '1497124966'),
-(91, 5, 'Fiterlinge', '1497124970'),
-(92, 2, 'Vasconcelos', '1497125036'),
-(93, 2, 'Vasconcelos', '1497125059'),
-(94, 2, 'Vasconcelos', '1497125079'),
-(95, 2, 'Vasconcelos', '1497125106'),
-(96, 6, 'NOVO USUARIO', '1497125124'),
-(97, 6, 'NOVO USUARIO', '1497125130'),
-(98, 6, 'NOVO USUARIO', '1497125146'),
-(99, 6, 'NOVO USUARIO', '1497125156'),
-(100, 2, 'Vasconcelos', '1497125162'),
-(101, 2, 'Vasconcelos', '1497125169'),
-(102, 2, 'Vasconcelos', '1497125173'),
-(103, 2, 'Vasconcelos', '1497125181'),
-(104, 2, 'Vasconcelos', '1497125187'),
-(105, 2, 'Vasconcelos', '1497125197'),
-(106, 6, 'NOVO USUARIO', '1497125204'),
-(107, 2, 'Vasconcelos', '1497125212'),
-(108, 2, 'Vasconcelos', '1497125217'),
-(109, 2, 'Vasconcelos', '1497125227'),
-(110, 2, 'Vasconcelos', '1497125235'),
-(111, 6, 'NOVO USUARIO', '1497125245'),
-(112, 6, 'NOVO USUARIO', '1497125250'),
-(113, 6, 'Carlos Nogueira', '1497125450'),
-(114, 6, 'Carlos Nogueira', '1497125458'),
-(115, 6, 'Carlos Nogueira', '1497125463'),
-(116, 6, 'Carlos Nogueira', '1497125474'),
-(117, 2, 'Vasconcelos', '1497125484'),
-(118, 2, 'Vasconcelos', '1497125493'),
-(119, 2, 'Vasconcelos', '1497125503'),
-(120, 6, 'Carlos Nogueira', '1497262127'),
-(121, 6, 'Carlos Nogueira', '1497268300'),
-(122, 6, 'Carlos Nogueira', '1497268324'),
-(123, 6, 'Carlos Nogueira', '1497268330'),
-(124, 7, 'NOVO USUARIO', '1497268339'),
-(125, 6, 'Carlos Nogueira', '1497268350'),
-(126, 6, 'Carlos Nogueira', '1497268377'),
-(127, 8, 'NOVO USUARIO', '1497268399'),
-(128, 6, 'Carlos Nogueira', '1497268408'),
-(129, 6, 'Carlos Nogueira', '1497268432'),
-(130, 9, 'NOVO USUARIO', '1497268450'),
-(131, 9, 'NOVO USUARIO', '1497268457'),
-(132, 9, 'NOVO USUARIO', '1497268463'),
-(133, 6, 'Carlos Nogueira', '1497268471'),
-(134, 6, 'Carlos Nogueira', '1497268492'),
-(135, 12, 'NOVO USUARIO', '1497268510'),
-(136, 1, 'Caio Sanches', '1497268950'),
-(137, 1, 'Caio Sanches', '1497269220'),
-(138, 1, 'Caio Sanches', '1497269226'),
-(139, 11, 'NOVO USUARIO', '1497269495'),
-(140, 3, 'Gabriel Silva', '1497269511'),
-(141, 12, 'NOVO USUARIO', '1497269516'),
-(142, 12, 'NOVO USUARIO', '1497269521'),
-(143, 11, 'NOVO USUARIO', '1497269525'),
-(144, 12, 'NOVO USUARIO', '1497269528'),
-(145, 12, 'NOVO USUARIO', '1497269709'),
-(146, 1, 'Caio Sanches', '1497270011'),
-(147, 1, 'Caio Sanches', '1497270023'),
-(148, 1, 'Caio Sanches', '1497270028'),
-(149, 1, 'Caio Sanches', '1497270041'),
-(150, 12, 'HIAGO', '1497270053'),
-(151, 1, 'Caio Sanches', '1497270292'),
-(152, 1, 'Caio Sanches', '1497270299'),
-(153, 1, 'Caio Sanches', '1497273107'),
-(154, 1, 'Caio Sanches', '1497273118'),
-(155, 13, 'NOVO USUARIO', '1497273137'),
-(156, 1, 'Caio Sanches', '1497273336'),
-(157, 1, 'Caio Sanches', '1497273342'),
-(158, 1, 'Caio Sanches', '1497273346'),
-(159, 1, 'Caio Sanches', '1497273402'),
-(160, 14, 'NOVO USUARIO', '1497273421'),
-(161, 9, 'HUMBERTO', '1497278556'),
-(162, 9, 'HUMBERTO', '1497278591'),
-(163, 1, 'Caio Sanches', '1497278596'),
-(164, 6, 'Carlos Nogueira', '1497278607'),
-(165, 1, 'Caio Sanches', '1497278612'),
-(166, 9, 'HUMBERTO', '1497278652'),
-(167, 9, 'ALFREDO', '1497278793'),
-(168, 1, 'Caio Sanches', '1497278798'),
-(169, 9, 'ALFREDO', '1497278805'),
-(170, 6, 'Carlos Nogueira', '1497278811'),
-(171, 6, 'Carlos Nogueira', '1497278820'),
-(172, 6, 'Carlos Nogueira', '1497278831'),
-(173, 10, 'GIUSEPPE', '1497278839'),
-(174, 1, 'Caio Sanches', '1497284400'),
-(175, 1, 'Caio Sanches', '1497284405'),
-(176, 1, 'Caio Sanches', '1497284414'),
-(177, 1, 'Caio Sanches', '1497284419'),
-(178, 4, 'Rafael Martins', '1497361885'),
-(179, 4, 'Rafael Martins', '1497361899'),
-(180, 1, 'Caio Sanches', '1497363994'),
-(181, 2, 'Vasconcelos', '1497364249'),
-(182, 2, 'Vasconcelos', '1497364677'),
-(183, 2, 'Vasconcelos', '1497364681'),
-(184, 2, 'Vasconcelos', '1497364690'),
-(185, 2, 'Vasconcelos', '1497364712'),
-(186, 2, 'Vasconcelos', '1497364718'),
-(187, 2, 'Vasconcelos', '1497364727'),
-(188, 1, 'Caio Sanches', '1497365193'),
-(189, 1, 'Caio Sanches', '1497365208'),
-(190, 1, 'Caio Sanches', '1497365213'),
-(191, 2, 'Vasconcelos', '1497365825'),
-(192, 2, 'Vasconcelos', '1497365830'),
-(193, 2, 'Vasconcelos', '1497366009'),
-(194, 4, 'Rafael Martins', '1497377985'),
-(195, 5, 'Fiterlinge', '1497378953'),
-(196, 5, 'Fiterlinge', '1497378963'),
-(197, 5, 'Fiterlinge', '1497467332'),
-(198, 5, 'Fiterlinge', '1497467336'),
-(199, 2, 'Vasconcelos', '1497473586'),
-(200, 2, 'Vasconcelos', '1497617944'),
-(201, 2, 'Vasconcelos', '1497617948'),
-(202, 2, 'Vasconcelos', '1497617952'),
-(203, 2, 'Vasconcelos', '1497617956'),
-(204, 2, 'Vasconcelos', '1497617961'),
-(205, 2, 'Vasconcelos', '1497617968'),
-(206, 2, 'Vasconcelos', '1497617971'),
-(207, 2, 'Vasconcelos', '1497617977'),
-(208, 2, 'Vasconcelos', '1497617980'),
-(209, 2, 'Vasconcelos', '1497617988'),
-(210, 2, 'Vasconcelos', '1497617992'),
-(211, 2, 'Vasconcelos', '1497617995'),
-(212, 2, 'Vasconcelos', '1497617999'),
-(213, 2, 'Vasconcelos', '1497618004'),
-(214, 2, 'Vasconcelos', '1497618008'),
-(215, 2, 'Vasconcelos', '1497618062'),
-(216, 15, 'NOVO USUARIO', '1497618081'),
-(217, 15, 'NOVO USUARIO', '1497618085'),
-(218, 15, 'Salvatti', '1497618166'),
-(219, 2, 'Vasconcelos', '1497618214'),
-(220, 16, 'NOVO USUARIO', '1497618236'),
-(221, 16, 'NOVO USUARIO', '1497618247'),
-(222, 16, 'NOVO USUARIO', '1497618253'),
-(223, 16, 'NOVO USUARIO', '1497618261'),
-(224, 16, 'Albuquerque', '1497618340'),
-(225, 2, 'Vasconcelos', '1497618359'),
-(226, 2, 'Vasconcelos', '1497618363'),
-(227, 2, 'Vasconcelos', '1497618368'),
-(228, 17, 'NOVO USUARIO', '1497618395'),
-(229, 2, 'Vasconcelos', '1497618526'),
-(230, 2, 'Vasconcelos', '1497618531'),
-(231, 2, 'Vasconcelos', '1497618535'),
-(232, 2, 'Vasconcelos', '1497618539'),
-(233, 17, 'marco Aurélio', '1497618545'),
-(234, 2, 'Vasconcelos', '1497618570'),
-(235, 2, 'Vasconcelos', '1497618573'),
-(236, 16, 'Albuquerque', '1497621270');
+(1, 1, 'Jefferson Ferreira', '1459341706'),
+(2, 1, 'Jefferson Ferreira', '1459341778'),
+(3, 1, 'Jefferson Ferreira', '1459341857'),
+(4, 1, 'Jefferson Ferreira', '1459342273'),
+(5, 1, 'Jefferson Ferreira', '1459342282'),
+(6, 1, 'Jefferson Ferreira', '1459342485'),
+(7, 1, 'Jefferson Ferreira', '1459342497'),
+(8, 1, 'Jefferson Ferreira', '1459342510'),
+(9, 1, 'Jefferson Ferreira', '1459343498'),
+(10, 2, 'Caio', '1459343744'),
+(11, 1, 'Jefferson Ferreira', '1459344094'),
+(12, 1, 'Jefferson Ferreira', '1459344106'),
+(13, 1, 'Jefferson Ferreira', '1459349810'),
+(14, 1, 'Jefferson Ferreira', '1459349832'),
+(15, 1, 'Jefferson Ferreira', '1459349839'),
+(16, 1, 'Jefferson Ferreira', '1459352672'),
+(17, 1, 'Jefferson Ferreira', '1459353511'),
+(18, 1, 'Jefferson Ferreira', '1459353752'),
+(19, 5, 'Fiterlinge Sousa', '1459353896'),
+(20, 4, 'Gabriel Silva', '1459353907'),
+(21, 1, 'Jefferson Ferreira', '1459359347'),
+(22, 1, 'Jefferson Ferreira', '1459359412'),
+(23, 1, 'Jefferson Ferreira', '1459361551'),
+(24, 1, 'Jefferson Ferreira', '1459361576'),
+(25, 1, 'Jefferson Ferreira', '1459361676'),
+(26, 1, 'Jefferson Ferreira', '1459361692'),
+(27, 7, 'NOVO USUARIO', '1459361740'),
+(28, 7, 'Luana Oliveira', '1459361769'),
+(29, 1, 'Jefferson Ferreira', '1459426101'),
+(30, 6, 'Lucas Vasconcelos', '1459426256'),
+(31, 6, 'Lucas Vasconcelos', '1459426283'),
+(32, 6, 'Lucas Vasconcelos', '1459426350'),
+(33, 1, 'Jefferson Ferreira', '1459439315'),
+(34, 9, 'Paulo Natan', '1459439545'),
+(35, 9, 'Paulo Natan', '1459439573'),
+(36, 1, 'Jefferson Ferreira', '1459512192');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ids`
+-- Estrutura da tabela `ids`
 --
 
-CREATE TABLE `ids` (
-  `id` int(255) NOT NULL,
+CREATE TABLE IF NOT EXISTS `ids` (
+`id` int(255) NOT NULL,
   `finger_id` int(255) NOT NULL,
   `available` int(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=163 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `ids`
+-- Extraindo dados da tabela `ids`
 --
 
 INSERT INTO `ids` (`id`, `finger_id`, `available`) VALUES
@@ -303,14 +101,14 @@ INSERT INTO `ids` (`id`, `finger_id`, `available`) VALUES
 (7, 7, 0),
 (8, 8, 0),
 (9, 9, 0),
-(10, 10, 0),
-(11, 11, 0),
-(12, 12, 0),
-(13, 13, 0),
-(14, 14, 0),
-(15, 15, 0),
-(16, 16, 0),
-(17, 17, 0),
+(10, 10, 1),
+(11, 11, 1),
+(12, 12, 1),
+(13, 13, 1),
+(14, 14, 1),
+(15, 15, 1),
+(16, 16, 1),
+(17, 17, 1),
 (18, 18, 1),
 (19, 19, 1),
 (20, 20, 1),
@@ -460,11 +258,11 @@ INSERT INTO `ids` (`id`, `finger_id`, `available`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Estrutura da tabela `users`
 --
 
-CREATE TABLE `users` (
-  `id` int(255) NOT NULL,
+CREATE TABLE IF NOT EXISTS `users` (
+`id` int(255) NOT NULL,
   `finger_id` int(64) NOT NULL,
   `user_id` varchar(255) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
@@ -473,28 +271,22 @@ CREATE TABLE `users` (
   `password` varchar(255) DEFAULT NULL,
   `access_level` tinyint(1) NOT NULL,
   `active` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users`
+-- Extraindo dados da tabela `users`
 --
 
 INSERT INTO `users` (`id`, `finger_id`, `user_id`, `name`, `user_name`, `email`, `password`, `access_level`, `active`) VALUES
-(1, 1, '01595845232', 'Caio Sanches', 'caiobentes', 'caiosbentes@gmail.com', '31b3b31a1c2f8a370206f111127c0dbd', 1, 1),
-(4, 2, '03161890221', 'Vasconcelos', 'vasconcelos', 'lucasilva@ufpa.br', NULL, 1, 1),
-(5, 3, '00977036219', 'Gabriel Silva', 'gabrielp', 'gabrielp@ufpa.br', NULL, 0, 1),
-(6, 4, '82917949287', 'Rafael Martins', 'rafaelmf', 'rafaelmf@ufpa.br', NULL, 0, 1),
-(7, 5, '99582368268', 'Fiterlinge', 'fiterlinge', 'fiterlinge@ufpa.br', NULL, 0, 1),
-(8, 6, '65460413249', 'Carlos Nogueira', 'cedon', 'cedon@ufpa.br', NULL, 1, 1),
-(11, 9, '01252535244', 'ALFREDO', 'alfredosilva', 'alfredosilva@ufpa.br', 'ea712e8264ffc01843012ba715c84eea', 0, 1),
-(12, 10, '52352528291', 'GIUSEPPE', 'giuseppe', 'giuseppe@ufpa.br', 'd6cf6d3783eeb89663fc24df434e6ef2', 0, 1),
-(13, 11, '52378659253', 'HUMBERTO', 'alfredosilva', 'alfredosilva@ufpa.br', 'ad075e928815c69f55450fd123c573a6', 0, 1),
-(14, 12, '00781409276', 'HIAGO', 'hcprata', 'hcprata@ufpa.br', '53120BAAFEC90692891BB0B203F28F38', 0, 1),
-(15, 13, '00775645290', 'PAULO NATAN', 'paulonatan', 'paulonatan@ufpa.br', 'eda786e559559eb4e4cee04df8ac34e5', 0, 1),
-(16, 14, NULL, 'CARMONA', 'herrcarmona', 'herrcarmona@ufpa.br', '9bb0d15a1b74fb8a09b10652bca57551', 0, 1),
-(17, 15, '52593380225', 'Salvatti', 'salvatti', 'salvatti@ufpa.br', NULL, 0, 1),
-(18, 16, '88938778215', 'Albuquerque', 'albuquerque', 'albuquerque@ufpa.br', NULL, 0, 1),
-(19, 17, '71257470272', 'Marco Aurelio', 'macapela', 'macapela@ufpa.br', NULL, 0, 1);
+(1, 1, NULL, 'Jefferson Ferreira', 'jeffersonfp', 'jefferson.e.etc@gmail.com', '31fb1a2badb6162a256bdf93b1ec6e8b', 1, 0),
+(2, 2, NULL, 'Caio', 'caiosbentes', 'caiosbentes@gmail.com', 'a4d55d9f92159522aee4e0bcb8fe1320', 1, 0),
+(3, 3, NULL, 'Sandra Rocha', 'sandra', 'sfrtrindade@gmail.com', '00b1d0ae28a9bf82df6815c618fbbcf1', 1, 0),
+(4, 4, NULL, 'Gabriel Silva', 'gabriel', NULL, 'cfab9ec82af84e8e7ff741c1b42ff6c0', 1, 0),
+(5, 5, NULL, 'Fiterlinge Sousa', 'fiter', '', '64c6f113a2c61719f6e01535c3fd6c95', 1, 0),
+(6, 6, NULL, 'Lucas Vasconcelos', 'lucas', NULL, '324cfebbe87c3b27eaa0afa9b497ee5d', 1, 0),
+(7, 7, NULL, 'Luana Oliveira', 'luana', NULL, '98ba5150709f5d78212cd07d234cfb98', 1, 0),
+(8, 8, NULL, 'Adalbery Castro', 'adalbery', 'adalbery@gmail.com', '202cb962ac59075b964b07152d234b70', 1, 0),
+(10, 9, NULL, 'Paulo Natan', 'paulonatan', NULL, '827ccb0eea8a706c4c34a16891f84e7b', 1, 0);
 
 --
 -- Indexes for dumped tables
@@ -504,19 +296,19 @@ INSERT INTO `users` (`id`, `finger_id`, `user_id`, `name`, `user_name`, `email`,
 -- Indexes for table `history`
 --
 ALTER TABLE `history`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `ids`
 --
 ALTER TABLE `ids`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -526,18 +318,17 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `history`
 --
 ALTER TABLE `history`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=237;
+MODIFY `id` int(255) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT for table `ids`
 --
 ALTER TABLE `ids`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=163;
+MODIFY `id` int(255) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=163;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;COMMIT;
-
+MODIFY `id` int(255) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
