@@ -16,12 +16,12 @@ services:
         container_name: mariadb
         restart: always
         environment:
-            - MYSQL_DATABASE=go
+            - MYSQL_DATABASE=dev
             - MYSQL_ROOT_PASSWORD=dev
             - MYSQL_USER=dev
             - MYSQL_PASSWORD=dev
         volumes:
-            - ./database/cp:/docker-entrypoint-initdb.d
+            - ./var/lib/mysql
         ports:
             - "3306:3306"
     go:
