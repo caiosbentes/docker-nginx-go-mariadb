@@ -12,11 +12,9 @@ services:
             - "./etc/ssl:/etc/ssl"
             - "./web:/web"
         depends_on:
-            - "php"
             - "mariadb"
         links:
             - "mariadb:mariadb"
-            - "php:php"
     myadmin:
         image: phpmyadmin/phpmyadmin
         container_name: phpmyadmin
