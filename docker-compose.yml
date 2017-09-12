@@ -16,7 +16,7 @@ services:
         container_name: mariadb
         restart: always
         environment:
-            - MYSQL_DATABASE=
+            - MYSQL_DATABASE=setserver
             - MYSQL_ROOT_PASSWORD=dev
             - MYSQL_USER=dev
             - MYSQL_PASSWORD=dev
