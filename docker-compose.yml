@@ -22,7 +22,7 @@ services:
     links:
       - mariadb
     ports:
-      - 80:80
+    - "8080:8080"
     environment:
       - PMA_ARBITRARY=1
   api:
