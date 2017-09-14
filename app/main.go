@@ -10,7 +10,7 @@ import (
 
 func Database() *gorm.DB {
 	//open a db connection
-	db, err := gorm.Open("mysql", "dev:dev@tcp(mariadb)/setserver?charset=utf8&parseTime=True&loc=Local")
+	db, err := gorm.Open("mysql","dev:dev@tcp(mariadb)/app?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
 		panic("failed to connect database")
 	}
